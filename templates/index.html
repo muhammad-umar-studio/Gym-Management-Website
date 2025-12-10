@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT MONSTER - Gym Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-gray-950 text-gray-200 font-sans antialiased">
+
+    <header class="bg-black sticky top-0 z-50 shadow-lg shadow-yellow-400/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="#home" class="text-3xl font-bold text-yellow-400">
+                FIT<span class="text-white">MONSTER</span>
+            </a>
+            
+            
+            <ul class="flex items-center space-x-6">
+                <li><a href="/" id="nav-home" class="nav-link text-white hover:text-yellow-400 text-lg font-medium">Home</a></li>
+                <li><a href="/about" id="nav-about" class="nav-link text-white hover:text-yellow-400 text-lg font-medium">About Us</a></li>
+                <li><a href="/membership" id="nav-membership" class="nav-link text-white hover:text-yellow-400 text-lg font-medium">Membership</a></li>
+            </ul>
+
+            
+            <a href="#membership" class="bg-yellow-400 text-black font-bold py-2 px-5 rounded-lg hover:bg-yellow-300 transition duration-300">
+                Join Now
+            </a>
+        </nav>
+    </header>
+
+    
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- ===== HOME PAGE ===== -->
+        <section id="home">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Left Column (Text & CTA) -->
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">
+                        Build Your <span class="text-yellow-400">Best Body</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Your fitness journey starts here. Join the most dedicated gym with state-of-the-art facilities and expert trainers.
+                    </p>
+                    <a href="#" class="bg-yellow-400 text-black text-lg font-bold py-3 px-8 rounded-lg hover:bg-yellow-300 transition duration-300" onclick="showPage('membership')">
+                        Get Started
+                    </a>
+                </div>
+                <!-- Right Column (Image) -->
+                <div class="md:w-1/2">
+                    <img src="https://images.squarespace-cdn.com/content/v1/653a87fc1afe4a55eb3fc8ef/1719325153980-KWPBTFIB6JJCZKF8GSMQ/IMG_4899.jpg" 
+                         alt="Modern Gym Interior" 
+                         class="rounded-lg shadow-2xl shadow-yellow-400/20"
+                         onerror="this.src='https://placehold.co/600x400/2d2d2d/eab308?text=Image+Not+Found'">
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="mt-20 text-center">
+                <h2 class="text-4xl font-bold mb-12">Why Choose Us?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800 shadow-lg">
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-3">Expert Trainers</h3>
+                        <p class="text-gray-400">Our certified trainers are here to guide you, motivate you, and help you reach your goals safely.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800 shadow-lg">
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-3">Modern Equipment</h3>
+                        <p class="text-gray-400">We provide the latest cardio, strength, and functional training equipment for a top-tier workout.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800 shadow-lg">
+                        <h3 class="text-2xl font-semibold text-yellow-400 mb-3">24/7 Access</h3>
+                        <p class="text-gray-400">Workout on your schedule. Our gym is open 24 hours a day, 7 days a week for all members.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 FIT MONSTER Gym. All rights reserved.</p>
+            <p class="mt-2">Built for a university assignment.</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Page Navigation (REMOVED as requested) -->
+    
+</body>
+</html>
